@@ -28,4 +28,4 @@ This plugin includes some workarounds for a few quirks on Windows that would oth
 
 * Long values of :envvar:`CLASSPATH` `run up against command-line length limits <https://stackoverflow.com/questions/48834927/the-input-line-is-too-long-when-starting-kafka>`_. As a workaround, the plugin temporarily maps the :envvar:`KAFKA_HOME` directory to a drive letter.
 
-* The Windows version of the :program:`kafka-server-start` script uses the :program:`wmic` command to determine an appropriate value ofr the Java heap size, but this command was removed in recent versions of Windows. This is a `known bug in Kafka <https://issues.apache.org/jira/browse/KAFKA-19890>`_. As a workaround, the plugin set the environment variable :envvar:`KAFKA_HEAP_OPTS` to an explicit value.
+* The Windows version of the :program:`kafka-server-start` script uses the :program:`wmic` command to determine an appropriate value for the Java heap size, but this command was removed in recent versions of Windows. This is a `known bug in Kafka <https://issues.apache.org/jira/browse/KAFKA-19890>`_. As a workaround, the plugin set the environment variable :envvar:`KAFKA_HEAP_OPTS` to an explicit value.
